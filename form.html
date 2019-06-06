@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8"> 
+        <style>
+            figure {
+             position: relative;
+             }
+ 
+        figure:before{
+            z-index: 3;
+            mix-blend-mode: overlay;
+            box-shadow: 0 0 200px black inset;
+        }
+        figure:after {
+            content: '';
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 3;
+            mix-blend-mode: hard-light;
+            box-shadow: 0 0 150px pink inset;
+            background: rgba(198, 155, 0, 0.3);
+            }
+        img {
+            filter: contrast(1.8) brightness(1.5) grayscale(1);
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+            .h2 {
+                background-color:rgb(0, 255, 234); 
+                color:black;
+            }
+            .h4 {
+                background-color: rgb(0, 255, 234);
+                color: black;
+                position: fixed;
+                bottom: 0; 
+                left: 50px; 
+                right: 50px;
+                text-align: center;
+            }
+            .rodape {
+            outline: 1px solid rgb(0, 0, 0)50, 246, 246);
+            outline-offset: 5px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9em; 
+        }
+        
+        </style>
+          
+    </head>
+      
+    <body>
+            <figure>
+                    <img style="float:right;" src="https://www.educamundo.com.br/uploads/blog_posts/719/linguagem-comunicacao-educamundo-01.jpg" width="500" height="450" />
+                </figure>
+        
+        <h4> Bem vindo </h4>
+        <h2> Questiońario para o aluno </h2>
+        <form>
+            <fieldset id="adotante">
+                <legend> Identificação/Ficha do Estudante </legend>
+                <p> Nome completo: <input  id="nome completo" name="nome" type="text" ></p>
+                <p> Data de seu nascimento: <input  id="data de nascimento" name="nascimento"  type="date" ></p>
+                <p> Logadouro: <input  id="rua" name="rua"  type="rua" ></p>
+                <p> Bairro: <input  id="Bairro" name="Bairro"  type="local" ></p>
+                <p> Cidade: <input  id="Cidade" name="Cidade"  type="local" ></p>
+                <p> Estado: <input  id="Estado" name="Estado"  type="local" ></p>
+                <p> Email: <input id="email" name="email" type="text" ></p>
+                <p> Número para contato <input id="numero" name="numero" type="number" ></p>
+                <p>Foto do Estudante : <input id="foto" name="foto" type="file" accept="image/png, image/jpg"></p>
+                <select id="moradia" name="moradia"> 
+                        <option value="residencia"> Residencia </option>
+                        <option value="apartamento"> Apartamento </option>
+                        <option value="seleciona" selected> Selecionar </option>
+                </select>
+            </fieldset>
+
+
+            <fieldset id="Curso">
+                <legend> Informação do Curso </legend>
+                <p> Idioma: 
+                    <select id="Idioma" name="Language">
+                            <option value="Portugues"> Portugues </option>
+                            <option value="English"> English </option>
+                            <option value="español"> español </option>
+                            <option value="Deustch"> Deustch</option>
+                            <option value="seleciona" selected> Selecionar Idioma </option>
+                    </select>
+                </p>
+
+                <p> Nivel: 
+                    <select id="Nivel" name="Nivel">
+                        <option value="Basico"> Basico </option>
+                        <option value="Intermediario"> Intermediario </option>
+                        <option value="Avançado"> Avançado </option>
+                        <option value="seleciona" selected> Selecionar </option>
+                    </select>
+                </p>
+                
+                
+            </fieldset>
+            
+
+            <fieldset id="Curso">
+                <legend> Plano: </legend>
+                 <label>
+                     <input type="radio" name="Plano" value="x"> Mensal </label>
+                 <br>
+                 <label>
+                     <input type="radio" name="Plano" value="x"> Trimestral </label>
+                 <br>
+                 <label>
+                     <input type="radio" name="Plano" value="x"> Semestral </label> 
+                 <br>   
+                 <label>
+                     <input type="radio" name="Plano" value="x"> Anual</label>
+                 <br>
+                 
+            </fieldset>
+        </form>
+        <div class="rodape">
+                <p>&copy; 2019 teixeira-bahio.github.io </p>
+        </div>
+    </body>
+</html>
